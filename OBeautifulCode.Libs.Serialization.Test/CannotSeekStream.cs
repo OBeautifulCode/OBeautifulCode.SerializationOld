@@ -1,6 +1,6 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CannotSeekStream.cs" company="CoMetrics">
-//   Copyright 2014 CoMetrics
+// <copyright file="CannotSeekStream.cs" company="OBeautifulCode">
+//   Copyright 2014 OBeautifulCode
 // </copyright>
 // <summary>
 //   Stream that cannot seek.
