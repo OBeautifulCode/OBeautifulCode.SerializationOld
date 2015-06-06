@@ -190,11 +190,15 @@ namespace OBeautifulCode.Serialization.Test
             random.NextBytes(bytes);
             ms2.Write(bytes, 0, bytes.Length);
 
-            // Act, Assert
+            // Act
             // ReSharper disable RedundantArgumentDefaultValue
-            Assert.DoesNotThrow(() => objToSerialize.SerializeToStreamAsBinary(ms1, false));
-            Assert.DoesNotThrow(() => objToSerialize.SerializeToStreamAsBinary(ms2, false));
+            var ex1 = Record.Exception(() => objToSerialize.SerializeToStreamAsBinary(ms1, false));
+            var ex2 = Record.Exception(() => objToSerialize.SerializeToStreamAsBinary(ms2, false));
             // ReSharper restore RedundantArgumentDefaultValue
+
+            // Assert
+            Assert.Null(ex1);
+            Assert.Null(ex2);
 
             // Cleanup
             ms1.Dispose();
