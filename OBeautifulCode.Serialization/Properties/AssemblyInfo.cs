@@ -13,11 +13,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("OBeautifulCode.Libs.Serialization.Test")]
+[assembly: AssemblyTitle("OBeautifulCode.Serialization")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("OBeautifulCode.Libs.Serialization.Test")]
+[assembly: AssemblyProduct("OBeautifulCode.Serialization")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -28,7 +28,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("17422ed6-bea2-4ce2-b69c-998b37f8b217")]
+[assembly: Guid("1229e58e-d2be-49d2-989d-37ae97c3338c")]
 
 // Version information for an assembly consists of the following four values:
 //

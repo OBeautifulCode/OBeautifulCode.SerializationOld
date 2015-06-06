@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace OBeautifulCode.Libs.Serialization.Test
+namespace OBeautifulCode.Serialization.Test
 {
     /// <summary>
     /// A class that cannot be serialized.

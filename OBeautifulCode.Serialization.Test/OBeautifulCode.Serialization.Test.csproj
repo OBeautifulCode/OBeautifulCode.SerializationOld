@@ -7,8 +7,8 @@
     <ProjectGuid>{9B83931B-FBD1-4DF8-80E0-33524CB992D5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OBeautifulCode.Libs.Serialization.Test</RootNamespace>
-    <AssemblyName>OBeautifulCode.Libs.Serialization.Test</AssemblyName>
+    <RootNamespace>OBeautifulCode.Serialization.Test</RootNamespace>
+    <AssemblyName>OBeautifulCode.Serialization.Test</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,7 +21,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Debug\OBeautifulCode.Libs.Serialization.Test.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\OBeautifulCode.Serialization.Test.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,7 +32,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Release\OBeautifulCode.Libs.Serialization.Test.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\OBeautifulCode.Serialization.Test.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -58,9 +58,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OBeautifulCode.Libs.Serialization\OBeautifulCode.Libs.Serialization.csproj">
+    <ProjectReference Include="..\OBeautifulCode.Serialization\OBeautifulCode.Serialization.csproj">
       <Project>{156c7d64-d0ee-4557-90d5-b53a23889baa}</Project>
-      <Name>OBeautifulCode.Libs.Serialization</Name>
+      <Name>OBeautifulCode.Serialization</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

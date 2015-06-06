@@ -7,7 +7,7 @@
 // </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace OBeautifulCode.Libs.Serialization.Test
+namespace OBeautifulCode.Serialization.Test
 {
     using System;
     using System.IO;
