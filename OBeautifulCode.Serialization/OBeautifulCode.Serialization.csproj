@@ -7,8 +7,8 @@
     <ProjectGuid>{156C7D64-D0EE-4557-90D5-B53A23889BAA}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>OBeautifulCode.Libs.Serialization</RootNamespace>
-    <AssemblyName>OBeautifulCode.Libs.Serialization</AssemblyName>
+    <RootNamespace>OBeautifulCode.Serialization</RootNamespace>
+    <AssemblyName>OBeautifulCode.Serialization</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -21,7 +21,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Debug\OBeautifulCode.Libs.Serialization.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\OBeautifulCode.Serialization.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,11 +32,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <DocumentationFile>bin\Release\OBeautifulCode.Libs.Serialization.XML</DocumentationFile>
+    <DocumentationFile>bin\Release\OBeautifulCode.Serialization.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CuttingEdge.Conditions">
-      <HintPath>..\packages\CuttingEdge.Conditions.1.2.0.0\lib\NET35\CuttingEdge.Conditions.dll</HintPath>
+    <Reference Include="Conditions, Version=2.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Conditions.2.0.0\lib\portable-net45+win+wpa81+wp80+MonoAndroid10+MonoTouch10\Conditions.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

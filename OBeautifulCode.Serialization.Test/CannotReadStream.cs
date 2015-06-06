@@ -1,37 +1,24 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="CannotWriteStream.cs" company="OBeautifulCode">
-//   Copyright 2014 OBeautifulCode
+// <copyright file="CannotReadStream.cs" company="OBeautifulCode">
+//   Copyright 2015 OBeautifulCode
 // </copyright>
-// <summary>
-//   Stream that cannot be written to.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace OBeautifulCode.Libs.Serialization.Test
+namespace OBeautifulCode.Serialization.Test
 {
     using System;
     using System.IO;
 
     /// <summary>
-    /// Stream that cannot be written to.
+    /// Stream that cannot be read.
     /// </summary>
     [Serializable]
-    public class CannotWriteStream : MemoryStream
+    public class CannotReadStream : MemoryStream
     {
-        #region Fields (Private)
-
-        #endregion
-
-        #region Constructors
-
-        #endregion
-
-        #region Properties
-
         /// <summary>
         /// Returns a value indicating whether the stream can be read.
         /// </summary>
-        public override bool CanWrite
+        public override bool CanRead
         {
             get
             {
@@ -39,32 +26,33 @@ namespace OBeautifulCode.Libs.Serialization.Test
             }
         }
 
-        #endregion
-
-        #region Public Methods
-
         /// <summary>
-        /// Writes to the stream.
+        /// Reads from the stream.
         /// </summary>
         /// <param name="buffer">The buffer.</param>
         /// <param name="offset">The offset.</param>
         /// <param name="count">The count.</param>
-        public override void Write(byte[] buffer, int offset, int count)
+        /// <returns>
+        /// Always throws <see cref="NotSupportedException"/>
+        /// </returns>
+        public override int Read(byte[] buffer, int offset, int count)
         {
             throw new NotSupportedException();
         }
 
         /// <summary>
-        /// Writes a byte.
+        /// Reads a byte.
         /// </summary>
-        /// <param name="value">The byte to write.</param>
-        public override void WriteByte(byte value)
+        /// <returns>
+        /// Always throws <see cref="NotSupportedException"/>
+        /// </returns>
+        public override int ReadByte()
         {
             throw new NotSupportedException();
         }
 
         /// <summary>
-        /// Begins writing to stream.
+        /// Begins reading from stream.
         /// </summary>
         /// <param name="buffer">The buffer.</param>
         /// <param name="offset">The offset.</param>
@@ -74,23 +62,9 @@ namespace OBeautifulCode.Libs.Serialization.Test
         /// <returns>
         /// Always throws <see cref="NotSupportedException"/>
         /// </returns>
-        public override IAsyncResult BeginWrite(byte[] buffer, int offset, int count, AsyncCallback callback, object state)
+        public override IAsyncResult BeginRead(byte[] buffer, int offset, int count, AsyncCallback callback, object state)
         {
             throw new NotSupportedException();
         }
-
-        #endregion
-
-        #region Internal Methods
-
-        #endregion
-
-        #region Protected Methods
-
-        #endregion
-
-        #region Private Methods
-
-        #endregion
     }
 }

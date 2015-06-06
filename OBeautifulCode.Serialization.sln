@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBeautifulCode.Libs.Serialization", "OBeautifulCode.Libs.Serialization\OBeautifulCode.Libs.Serialization.csproj", "{156C7D64-D0EE-4557-90D5-B53A23889BAA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBeautifulCode.Serialization", "OBeautifulCode.Serialization\OBeautifulCode.Serialization.csproj", "{156C7D64-D0EE-4557-90D5-B53A23889BAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBeautifulCode.Libs.Serialization.Test", "OBeautifulCode.Libs.Serialization.Test\OBeautifulCode.Libs.Serialization.Test.csproj", "{9B83931B-FBD1-4DF8-80E0-33524CB992D5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OBeautifulCode.Serialization.Test", "OBeautifulCode.Serialization.Test\OBeautifulCode.Serialization.Test.csproj", "{9B83931B-FBD1-4DF8-80E0-33524CB992D5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

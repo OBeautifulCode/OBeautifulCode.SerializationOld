@@ -1,13 +1,10 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
 // <copyright file="SerializationHelper.cs" company="OBeautifulCode">
-//   Copyright 2014 OBeautifulCode
+//   Copyright 2015 OBeautifulCode
 // </copyright>
-// <summary>
-//   Provides convenience methods related to serialization.
-// </summary>
 // --------------------------------------------------------------------------------------------------------------------
 
-namespace OBeautifulCode.Libs.Serialization
+namespace OBeautifulCode.Serialization
 {
     using System;
     using System.IO;
@@ -15,27 +12,13 @@ namespace OBeautifulCode.Libs.Serialization
     using System.Runtime.Serialization.Formatters.Binary;
     using System.Security;
 
-    using CuttingEdge.Conditions;
+    using Conditions;
 
     /// <summary>
     /// Provides convenience methods related to serialization.
     /// </summary>
     public static class SerializationHelper
     {
-        #region Fields (Private)
-
-        #endregion
-
-        #region Constructors
-
-        #endregion
-
-        #region Properties
-
-        #endregion
-
-        #region Public Methods
-
         /// <summary>
         /// Serializes an object to a MemoryStream using the BinaryFormatter
         /// </summary>
@@ -116,18 +99,6 @@ namespace OBeautifulCode.Libs.Serialization
         {
             return Deserialize<T>(value, new BinaryFormatter(), seekToFirstPosition);
         }
-
-        #endregion
-
-        #region Internal Methods
-
-        #endregion
-
-        #region Protected Methods
-
-        #endregion
-
-        #region Private Methods
 
         /// <summary>
         /// Serializes an object to a stream using a given formatter.
@@ -217,7 +188,5 @@ namespace OBeautifulCode.Libs.Serialization
                 throw new InvalidOperationException("Expected type of deserialized object does not match its actual type.");
             }
         }
-
-        #endregion
     }
 }
