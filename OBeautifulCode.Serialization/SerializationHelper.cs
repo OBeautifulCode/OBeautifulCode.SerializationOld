@@ -15,7 +15,7 @@ namespace OBeautifulCode.Serialization
     using System.Runtime.Serialization.Formatters.Binary;
     using System.Security;
 
-    using CuttingEdge.Conditions;
+    using Conditions;
 
     /// <summary>
     /// Provides convenience methods related to serialization.
