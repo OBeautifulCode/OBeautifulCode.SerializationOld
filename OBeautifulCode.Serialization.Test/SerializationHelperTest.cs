@@ -23,19 +23,6 @@ namespace OBeautifulCode.Serialization.Test
     /// </summary>
     public class SerializationHelperTest
     {
-        #region Fields (Private)
-
-        #endregion
-
-        #region Constructors
-
-        #endregion
-
-        #region Properties
-
-        #endregion
-
-        #region Public Methods
         // ReSharper disable InconsistentNaming
 
         /// <summary>
@@ -549,19 +536,6 @@ namespace OBeautifulCode.Serialization.Test
             streamAtLastPosition.Dispose();
         }
 
-        // ReSharper restore InconsistentNaming
-        #endregion
-
-        #region Internal Methods
-
-        #endregion
-
-        #region Protected Methods
-
-        #endregion
-
-        #region Private Methods
-
-        #endregion
+        // ReSharper restore InconsistentNaming        
     }
 }

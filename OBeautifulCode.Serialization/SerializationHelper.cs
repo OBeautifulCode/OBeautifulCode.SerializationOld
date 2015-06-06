@@ -22,20 +22,6 @@ namespace OBeautifulCode.Serialization
     /// </summary>
     public static class SerializationHelper
     {
-        #region Fields (Private)
-
-        #endregion
-
-        #region Constructors
-
-        #endregion
-
-        #region Properties
-
-        #endregion
-
-        #region Public Methods
-
         /// <summary>
         /// Serializes an object to a MemoryStream using the BinaryFormatter
         /// </summary>
@@ -116,18 +102,6 @@ namespace OBeautifulCode.Serialization
         {
             return Deserialize<T>(value, new BinaryFormatter(), seekToFirstPosition);
         }
-
-        #endregion
-
-        #region Internal Methods
-
-        #endregion
-
-        #region Protected Methods
-
-        #endregion
-
-        #region Private Methods
 
         /// <summary>
         /// Serializes an object to a stream using a given formatter.
@@ -217,7 +191,5 @@ namespace OBeautifulCode.Serialization
                 throw new InvalidOperationException("Expected type of deserialized object does not match its actual type.");
             }
         }
-
-        #endregion
     }
 }

@@ -18,16 +18,6 @@ namespace OBeautifulCode.Serialization.Test
     [Serializable]
     public class CannotWriteStream : MemoryStream
     {
-        #region Fields (Private)
-
-        #endregion
-
-        #region Constructors
-
-        #endregion
-
-        #region Properties
-
         /// <summary>
         /// Returns a value indicating whether the stream can be read.
         /// </summary>
@@ -38,11 +28,7 @@ namespace OBeautifulCode.Serialization.Test
                 return false;
             }
         }
-
-        #endregion
-
-        #region Public Methods
-
+        
         /// <summary>
         /// Writes to the stream.
         /// </summary>
@@ -78,19 +64,5 @@ namespace OBeautifulCode.Serialization.Test
         {
             throw new NotSupportedException();
         }
-
-        #endregion
-
-        #region Internal Methods
-
-        #endregion
-
-        #region Protected Methods
-
-        #endregion
-
-        #region Private Methods
-
-        #endregion
     }
 }

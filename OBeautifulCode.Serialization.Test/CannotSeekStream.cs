@@ -18,16 +18,6 @@ namespace OBeautifulCode.Serialization.Test
     [Serializable]
     public class CannotSeekStream : MemoryStream
     {
-        #region Fields (Private)
-
-        #endregion
-
-        #region Constructors
-
-        #endregion
-
-        #region Properties
-
         /// <summary>
         /// Returns a value indicating whether the stream can be read.
         /// </summary>
@@ -55,10 +45,6 @@ namespace OBeautifulCode.Serialization.Test
             }
         }
        
-        #endregion
-
-        #region Public Methods
-
         /// <summary>
         /// Seeks to a position within the stream.
         /// </summary>
@@ -70,20 +56,6 @@ namespace OBeautifulCode.Serialization.Test
         public override long Seek(long offset, SeekOrigin loc)
         {
             throw new NotSupportedException();
-        }
-        
-        #endregion
-
-        #region Internal Methods
-
-        #endregion
-
-        #region Protected Methods
-
-        #endregion
-
-        #region Private Methods
-
-        #endregion
+        }        
     }
 }
