@@ -24,10 +24,6 @@ namespace OBeautifulCode.Serialization.Test
     public class SerializationHelperTest
     {
         // ReSharper disable InconsistentNaming
-
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToStreamAsBinary_ObjectToSerializeIsNull_ThrowsArgumentNullException()
         {
@@ -38,9 +34,6 @@ namespace OBeautifulCode.Serialization.Test
             Assert.Throws<ArgumentNullException>(() => SerializationHelper.SerializeToStreamAsBinary(null, ms));
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToStreamAsBinary_StreamIsNull_ThrowsArgumentNullException()
         {
@@ -51,9 +44,6 @@ namespace OBeautifulCode.Serialization.Test
             Assert.Throws<ArgumentNullException>(() => objToSerialize.SerializeToStreamAsBinary(null));
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToStreamAsBinary_ObjectCannotBeSerialized_ThrowsSerializationException()
         {
@@ -65,9 +55,6 @@ namespace OBeautifulCode.Serialization.Test
             Assert.Throws<SerializationException>(() => objToSerialize.SerializeToStreamAsBinary(ms));
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToStreamAsBinary_StreamCannotBeWrittenTo_ThrowsArgumentException()
         {
@@ -79,9 +66,6 @@ namespace OBeautifulCode.Serialization.Test
             Assert.Throws<ArgumentException>(() => objToSerialize.SerializeToStreamAsBinary(ms));
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToStreamAsBinary_SeekToPreWriteIsTrueAndStreamIsNotSeekable_ThrowsArgumentException()
         {
@@ -93,9 +77,6 @@ namespace OBeautifulCode.Serialization.Test
             Assert.Throws<ArgumentException>(() => objToSerialize.SerializeToStreamAsBinary(ms, true));
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToStreamAsBinary_SerializeString_ProperlySerializesStringToBinary()
         {
@@ -118,9 +99,6 @@ namespace OBeautifulCode.Serialization.Test
             Assert.Equal(ObjToSerialize, (string)actual);
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToStreamAsBinary_SerializeDictionary_ProperlySerializesDictionaryToBinary()
         {
@@ -152,9 +130,6 @@ namespace OBeautifulCode.Serialization.Test
             Assert.Equal(456, actualAsDict["secondkey"]);
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToStreamAsBinary_SeekToPreWriteIsTrue_ReturnsStreamToPreWritePosition()
         {
@@ -177,9 +152,6 @@ namespace OBeautifulCode.Serialization.Test
             Assert.Equal(bytes.Length, ms2.Position);
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToStreamAsBinary_SeekToPreWriteIsFalse_ReturnsStreamAtPostWritePosition()
         {
@@ -208,9 +180,6 @@ namespace OBeautifulCode.Serialization.Test
             ms2.Dispose();
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToStreamAsBinary_StreamIsNotSeekableAndSeekToPreWriteIsFalse_DoesNotThrow()
         {
@@ -235,9 +204,6 @@ namespace OBeautifulCode.Serialization.Test
             ms2.Dispose();
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToMemoryStreamAsBinary_ObjectToSerializeIsNull_ThrowsArgumentNullException()
         {
@@ -245,9 +211,6 @@ namespace OBeautifulCode.Serialization.Test
             Assert.Throws<ArgumentNullException>(() => SerializationHelper.SerializeToMemoryStreamAsBinary(null));
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToMemoryStreamAsBinary_ObjectCannotBeSerialized_ThrowsSerializationException()
         {
@@ -258,9 +221,6 @@ namespace OBeautifulCode.Serialization.Test
             Assert.Throws<SerializationException>(() => objToSerialize.SerializeToMemoryStreamAsBinary());
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToMemoryStreamAsBinary_SerializeString_ReturnsMemoryStreamWithStringProperlySerializedToBinary()
         {
@@ -282,9 +242,6 @@ namespace OBeautifulCode.Serialization.Test
             Assert.Equal(ObjToSerialize, (string)actual);
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToMemoryStreamAsBinary_SerializeDictionary_ReturnsMemoryStreamWithDictionaryProperlySerializedToBinary()
         {
@@ -315,9 +272,6 @@ namespace OBeautifulCode.Serialization.Test
             Assert.Equal(456, actualAsDict["secondkey"]);
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToMemoryStreamAsBinary_SeekToFirstPositionIsTrue_ReturnsMemoryStreamWithStringProperlySerializedToBinary()
         {
@@ -336,9 +290,6 @@ namespace OBeautifulCode.Serialization.Test
             ms.Dispose();
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void SerializeToMemoryStreamAsBinary_SeekToFirstPositionIsFalse_ReturnsMemoryStreamWithStringProperlySerializedToBinary()
         {
@@ -356,9 +307,6 @@ namespace OBeautifulCode.Serialization.Test
             ms.Dispose();
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void DeserializeFromBinary_StreamIsNull_ThrowsArgumentNullException()
         {
@@ -366,9 +314,6 @@ namespace OBeautifulCode.Serialization.Test
             Assert.Throws<ArgumentNullException>(() => SerializationHelper.DeserializeFromBinary<object>(null));
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void DeserializeFromBinary_StreamDoesNotSupportReading_ThrowsArgumentException()
         {
@@ -384,9 +329,6 @@ namespace OBeautifulCode.Serialization.Test
             ms.Dispose();
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void DeserializeFromBinary_StreamSupportsSeekingButLengthIsZero_ThrowsArgumentException()
         {
@@ -400,9 +342,6 @@ namespace OBeautifulCode.Serialization.Test
             ms.Dispose();
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void DeserializeFromBinary_SeekToFirstPositionIsTrueButStreamIsNotSeekable_ThrowsArgumentException()
         {
@@ -418,9 +357,6 @@ namespace OBeautifulCode.Serialization.Test
             ms.Dispose();
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void DeserializeFromBinary_ExpectedTypeOfDeserializedObjectDoesNotMatchActualType_ThrowsInvalidOperationException()
         {
@@ -437,9 +373,6 @@ namespace OBeautifulCode.Serialization.Test
             ms.Dispose();
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void DeserializeFromBinary_ObjectSerializedNotUsingTheBinaryFormatter_ThrowsSerializationException()
         {
@@ -457,9 +390,6 @@ namespace OBeautifulCode.Serialization.Test
             ms.Dispose();
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void DeserializeFromBinary_SerializedObjectIsDictionary_ReturnsSameDictionary()
         {
@@ -485,9 +415,6 @@ namespace OBeautifulCode.Serialization.Test
             ms.Dispose();
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void DeserializeFromBinary_SeekToFirstPositionIsTrueAndStreamIsAtLastPosition_EnablesStreamToDeserialize()
         {
@@ -513,9 +440,6 @@ namespace OBeautifulCode.Serialization.Test
             streamAtLastPositon.Dispose();
         }
 
-        /// <summary>
-        /// Test method.
-        /// </summary>
         [Fact]
         public static void DeserializeFromBinary_SeekToFirstPositionIsFalseAndStreamIsAtLastPosition_ThrowsSerializationException()
         {
